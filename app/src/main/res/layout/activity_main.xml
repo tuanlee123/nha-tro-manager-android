@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calc_bg"
+    android:padding="16dp">
+
+    <!-- Display Area -->
+    <LinearLayout
+        android:id="@+id/layoutDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="bottom|end"
+        android:background="@color/display_bg"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layoutKeypad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="1.2">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="22sp"
+            android:textColor="#5F6368"
+            android:maxLines="2"
+            android:ellipsize="start" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="44sp"
+            android:textStyle="bold"
+            android:textColor="#202124"
+            android:maxLines="1"
+            android:ellipsize="start"
+            android:text="@string/calc_initial_zero" />
+    </LinearLayout>
+
+    <!-- Keypad Area -->
+    <LinearLayout
+        android:id="@+id/layoutKeypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        tools:ignore="NestedWeights,ButtonStyle"
+        app:layout_constraintTop_toBottomOf="@id/layoutDisplay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_weight="2.8">
+
+        <!-- Row 1: C, ±, %, ÷ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_clear"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_action"
+                android:textColor="@color/btn_action_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnPlusMinus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_plus_minus"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_percent"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_divide"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+
+        <!-- Row 2: 7, 8, 9, × -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_7"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_8"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_9"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_multiply"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+
+        <!-- Row 3: 4, 5, 6, − -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_4"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_5"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_6"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnSubtract"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_subtract"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+
+        <!-- Row 4: 1, 2, 3, + -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_1"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_2"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_3"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_add"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_operator"
+                android:textColor="@color/btn_operator_text"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+
+        <!-- Row 5: DEL, 0, ., = -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_del"
+                android:textSize="18sp"
+                app:backgroundTint="@color/btn_action"
+                android:textColor="@color/btn_action_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_btn_0"
+                android:textSize="22sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_dot"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_number"
+                android:textColor="@color/btn_number_text"
+                app:cornerRadius="16dp" />
+
+            <Button
+                android:id="@+id/btnEquals"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="4dp"
+                android:text="@string/calc_equals"
+                android:textSize="24sp"
+                app:backgroundTint="@color/btn_equals"
+                android:textColor="@color/btn_equals_text"
+                app:cornerRadius="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
