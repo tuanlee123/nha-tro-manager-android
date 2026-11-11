@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Quản Lý Nhà Trọ</string>
+    <string name="app_name_new">Quản Lý Nhà Trọ</string>
+
+    <!-- Auth -->
+    <string name="title_login">Đăng Nhập</string>
+    <string name="subtitle_login">Hệ thống quản lý phòng trọ thông minh</string>
+    <string name="label_phone">Số điện thoại</string>
+    <string name="label_password">Mật khẩu</string>
+    <string name="label_confirm_password">Nhập lại mật khẩu</string>
+    <string name="label_full_name">Họ và tên</string>
+    <string name="btn_login">ĐĂNG NHẬP</string>
+    <string name="btn_register">ĐĂNG KÝ TÀI KHOẢN</string>
+    <string name="prompt_no_account">Chưa có tài khoản? Đăng ký ngay</string>
+    <string name="prompt_have_account">Đã có tài khoản? Đăng nhập ngay</string>
+    <string name="title_register">Đăng Ký Tài Khoản</string>
+    <string name="role_owner">Chủ trọ</string>
+    <string name="role_tenant">Khách thuê</string>
+    <string name="label_boarding_house_name">Tên khu trọ</string>
+    <string name="label_select_bank">Ngân hàng thụ hưởng</string>
+    <string name="label_bank_account_no">Số tài khoản ngân hàng</string>
+    <string name="label_bank_account_name">Tên chủ tài khoản (in hoa không dấu)</string>
+    <string name="label_id_card">Số CCCD / CMND</string>
+    <string name="btn_seed_data">Tạo dữ liệu mẫu Test</string>
+
+    <!-- Join Room -->
+    <string name="title_join_room">Vào Phòng Trọ</string>
+    <string name="subtitle_join_room">Quét mã QR do chủ trọ cung cấp hoặc nhập mã phòng thủ công</string>
+    <string name="btn_scan_qr">QUÉT MÃ QR TỪ CHỦ TRỌ</string>
+    <string name="hint_room_token">Ví dụ: JOIN101</string>
+    <string name="label_manual_token">Hoặc nhập mã phòng (Token) thủ công:</string>
+    <string name="btn_confirm_join">XÁC NHẬN VÀO PHÒNG</string>
+
+    <!-- Tenant Dashboard -->
+    <string name="title_tenant_dashboard">Khách Thuê Phòng</string>
+    <string name="hello_user">Xin chào, %1$s</string>
+    <string name="btn_logout">Đăng xuất</string>
+    <string name="btn_leave_room">Rời phòng (Test)</string>
+    <string name="card_room_info_title">Thông tin phòng đang thuê</string>
+    <string name="card_invoice_title">Hóa đơn tháng %1$d/%2$d</string>
+    <string name="card_payment_title">Thanh toán VietQR</string>
+    <string name="status_paid">ĐÃ THANH TOÁN</string>
+    <string name="status_unpaid">CHƯA THANH TOÁN</string>
+    <string name="btn_save_bike_count">Lưu số lượng xe</string>
+    <string name="btn_save_qr_image">LƯU MÃ QR VỀ MÁY</string>
+    <string name="invoice_paid_desc">Hóa đơn tháng này đã được thanh toán hoàn tất.</string>
+    <string name="no_invoice_desc">Hiện tại chưa có hóa đơn phát sinh cho phòng này.</string>
+
+    <!-- Owner Dashboard -->
+    <string name="title_owner_dashboard">Bảng Điều Khiển Chủ Trọ</string>
+    <string name="owner_welcome">Khu trọ: %1$s</string>
+
+    <!-- Calculator Legacy -->
+    <string name="click_me_design">Click Me (Design)</string>
+    <string name="click_me_code">Click Me (Code)</string>
+    <string name="text_main_2">Giao diện activity_main_2.xml</string>
+    <string name="btn_main_2">Button trong Activity 2</string>
+    <string name="calc_clear">C</string>
+    <string name="calc_del">DEL</string>
+    <string name="calc_percent">%</string>
+    <string name="calc_divide">÷</string>
+    <string name="calc_multiply">×</string>
+    <string name="calc_subtract">−</string>
+    <string name="calc_add">+</string>
+    <string name="calc_equals">=</string>
+    <string name="calc_dot">.</string>
+    <string name="calc_plus_minus">±</string>
+    <string name="calc_initial_zero">0</string>
+    <string name="calc_btn_0">0</string>
+    <string name="calc_btn_1">1</string>
+    <string name="calc_btn_2">2</string>
+    <string name="calc_btn_3">3</string>
+    <string name="calc_btn_4">4</string>
+    <string name="calc_btn_5">5</string>
+    <string name="calc_btn_6">6</string>
+    <string name="calc_btn_7">7</string>
+    <string name="calc_btn_8">8</string>
+    <string name="calc_btn_9">9</string>
+</resources>
